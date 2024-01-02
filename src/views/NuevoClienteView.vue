@@ -34,8 +34,6 @@
                   :validation-messages="{required: 'El Nombre del Cliente es Obligatorio'}"
                   
                   />
-
-
                 </FormKit>
               </div>
              </div>
