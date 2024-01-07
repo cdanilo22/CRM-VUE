@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
 import Inicio from '../views/ClientesView.vue'
 
 const router = createRouter({
@@ -7,15 +6,22 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'inicio',
+      name: 'listado-clientes',
       component: Inicio,
-      props: { titulo: 'Listado de Clientes desde Router'}
+      props: {titulo: 'Listado de clientes'}
     },
     {
       path: '/agregar-cliente',
       name: 'agregar-cliente',
-      component: () => import('../views/NuevoClienteView.vue'),
-      props: {titulo: 'Agregar Cliente'}
+      props: {titulo: 'Agregar Cliente'},
+      component: () => import ('../views/NuevoClienteView.vue')
+     
+    },
+    {
+      path: '/editar-cliente/:id',
+      name: 'editar-cliente',
+      props: {titulo: 'Editar Cliente'},
+      component: () => import ('../views/EditarClienteview.vue')
     },
 
   ]
